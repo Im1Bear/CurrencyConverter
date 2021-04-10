@@ -9,15 +9,17 @@ public class Main {
         long Dollar;
         long Euro;
         long GBP;
+        // GBP = British Pound
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What do you want to do? \n" +
-                "1. Convert $ to €\n" +
-                "2. Convert $ to Bitcoin\n" +
-                "3. Convert € to Bitcoin\n" +
-                "4. Convert GBP to €\n" +
-                "5. Convert $ to GPB" +
-                "6. Convert GBP to Bitcoin");
+        System.out.println("""
+                What do you want to do?\s
+                1. Convert Dollar ($) to Euro (€)
+                2. Convert Dollar ($) to Bitcoin (₿)
+                3. Convert € to Bitcoin (₿)
+                4. Convert GBP to €
+                5. Convert GBP to $
+                6. Convert GBP to Bitcoin (₿)""");
         System.out.println("Enter a Number: ");
         Number = scanner.nextInt();
         if (Number == 1) {
@@ -42,8 +44,11 @@ public class Main {
             Euro = scanner.nextLong();
             System.out.println("Bitcoin: " + Euro * 0.000020);
         } else if (Number == 4) {
+            // Option Nr. 4
+            // Converting British Pound to Euro
             System.out.println("Enter how much you want to convert: ");
-
+            GBP = scanner.nextLong();
+            System.out.println("Euro: " + 1.15 * GBP);
         }
     }
 }
