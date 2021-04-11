@@ -1,3 +1,7 @@
+/*
+        The Market Changes everyday so this Converter will not be useful
+        for every Day at work/school/home
+*/
 package com.im1bear;
 
 import java.util.Scanner;
@@ -8,8 +12,8 @@ public class Main {
         int Number;
         long Dollar;
         long Euro;
+        double Bitcoin;
         long GBP;
-        // GBP = British Pound
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
@@ -49,6 +53,19 @@ public class Main {
             System.out.println("Enter how much you want to convert: ");
             GBP = scanner.nextLong();
             System.out.println("Euro: " + 1.15 * GBP);
+        } else if (Number == 5) {
+            // Option Nr. 5
+            // Converting GBP to Bitcoin
+            System.out.println("Enter how much you want to convert: ");
+            GBP = scanner.nextLong();
+            System.out.println("Dollar: " + GBP * 1.37);
+        } else if (Number == 6) {
+            // Option Nr. 6
+            // Converting GBP to Bitcoin
+            Bitcoin = 0.000023;
+            System.out.println("Enter how much you want to convert: ");
+            GBP = scanner.nextLong();
+            System.out.println("Bitcoin: " + GBP * Bitcoin);
         }
     }
 }
